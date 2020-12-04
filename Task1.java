@@ -2,6 +2,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Task1 {
+    public static void main(String[] args) {
+        Task1.infoAboutString("Hello, my name is John. I am 99 years old!");
+    }
     public static void infoAboutString(String string) {
         int countOfLetter = 0;
         int countOfDigit = 0;
