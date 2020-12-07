@@ -1,3 +1,5 @@
+package exercise2;
+
 import java.io.FileReader;
 import java.util.*;
 
@@ -20,7 +22,7 @@ public class Task2 {
             list.add(temp);
         }
 
-        Collections.sort(list, new StringLengthComparator());
+        list.sort(new StringLengthComparator());
         int shortestLength = list.get(0).length();
         int longestLength = list.get(list.size() - 1).length();
         fr.close();
@@ -59,20 +61,9 @@ public class Task2 {
                 shortestW + "] and he repeats - " + countOfShortestWord +
                 System.lineSeparator() + "and longest word is - [" + longestW +
                 "] and he repeats - " + countOfLongestWord);
+        System.out.println("высокопревосходительство".length());
     }
 }
 
-class StringLengthComparator implements Comparator<String> {
 
-    @Override
-    public int compare(String o1, String o2) {
-        if (o1.length() > o2.length()) {
-            return 1;
-        } else if (o1.length() < o2.length()) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
-}
 
